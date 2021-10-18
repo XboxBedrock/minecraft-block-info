@@ -3,7 +3,7 @@ declare module 'minecraft-block-info' {
     export function isValidBlockID(id: string): boolean;
     export function isValidBlockName(name: string): boolean;
     export function isValidBlockDisplayName(displayName: string): boolean;
-    export function getBlockInfoFromIDs(ids: any[]): string;
-    export function getBlockInfoFromNames(names: any[]): string;
-    export function getBlockInfoFromDisplayNames(displayNames: any[]): string;
+    export function getBlockInfoFromIDs(ids: any[]): any[];
+    export function getBlockInfoFromNames(names: any[]): any[];
+    export function getBlockInfoFromDisplayNames(displayNames: any[]): any[];
 }
