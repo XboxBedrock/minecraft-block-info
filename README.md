@@ -14,6 +14,16 @@ const mcblockinfo = require("minecraft-block-info")
 
 ```
 #
+async getBlockImageObject - Returns an image of the block objects given in base64 format
+Accepts valid block ids in a list as an argument
+```
+const mcblockinfo = require("minecraft-block-info")
+		mcblockinfo.getBlockImageObject(["1", "2", "3:0"]).then((img) => console.log(img))
+	})
+})
+
+```
+#
 isValidBlockID() - Returns a boolean of wheter this is a valid block id or not
 Accepts string of block id as argument
 ```
@@ -69,4 +79,19 @@ const mcblockinfo = require("minecraft-block-info")
 mcblockinfo.getBlockInfoFromNames(["dirt", "grass", "minecart"]).then((res) => {console.log(res)})
 ```
 
+#
+async searchAbsolute - returns block info based on list of ids names or displayNames
+Accepts list of block names or displayNames or ids as argument
+```
+const mcblockinfo = require("minecraft-block-info")
 
+mcblockinfo.searchAbsolute(["Grass Block", "3:0", "minecart"]).then((res) => {console.log(res)})
+```
+
+async search - returns block info based on query
+Accepts string query
+```
+const mcblockinfo = require("minecraft-block-info")
+
+mcblockinfo.search("dirt").then((res) => {console.log(res)})
+```
