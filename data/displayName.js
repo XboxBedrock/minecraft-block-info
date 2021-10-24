@@ -19,7 +19,7 @@ const displayNameMappings = {
     "Dirt": {
         "displayName": "Dirt",
         "name": "dirt",
-        "id": 3
+        "id": "3:0"
     },
     "Coarse Dirt": {
         "displayName": "Coarse Dirt",
