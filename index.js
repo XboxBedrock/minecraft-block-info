@@ -88,7 +88,7 @@ module.exports.getBlockInfoFromDisplayNames = async function getBlockInfoFromDis
 module.exports.searchAbsolute = async function searchAbsolute (queryList = []) {
   const exportList = []
   queryList.forEach((element) => {
-    if (mergedMappings[element]) exportList.push(mergedMappings[element])
+    if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toLowerCase())) exportList.push(mergedMappings[Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toLowerCase())])
   })
 
   return [...new Set(exportList)]
