@@ -88,7 +88,7 @@ module.exports.getBlockInfoFromDisplayNames = async function getBlockInfoFromDis
 module.exports.searchAbsolute = async function searchAbsolute (queryList = []) {
   const exportList = []
   queryList.forEach((element) => {
-    if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toLowerCase())) exportList.push(mergedMappings[Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toLowerCase())])
+    if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toString().toLowerCase())) exportList.push(mergedMappings[Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toString().toLowerCase())])
   })
 
   return [...new Set(exportList)]
@@ -114,7 +114,7 @@ module.exports.search = async function search (query) {
 module.exports.filterInvalid = async function filterInvalid (queryList = []) {
   const exportList = []
   queryList.forEach((element) => {
-    if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toLowerCase())) exportList.push(element)
+    if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toString().toLowerCase())) exportList.push(element)
   })
 
   return [...new Set(exportList)]
