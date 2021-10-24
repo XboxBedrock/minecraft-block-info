@@ -24,7 +24,7 @@ module.exports.getBlockImageID = async function getBlockImageID (ids = []) {
     }
   })
   if (imgList.length === 1) return ('data:image/png;base64,' + imgList[0].toString('base64'))
-  if (imgList.length === 1) return ''
+  if (imgList.length === 0) return ''
   const bufferimg = await (await joinImages.joinImages(imgList, { direction: 'vertical' })).png().toBuffer()
   return ('data:image/png;base64,' + bufferimg.toString('base64'))
 }
@@ -35,7 +35,7 @@ module.exports.getBlockImageObject = async function getBlockImageID (objects = [
     if (imageMappings[element.id]) imgList.push(Buffer.from(imageMappings[element.id].image.split(';base64,').pop(), 'base64'))
   })
   if (imgList.length === 1) return ('data:image/png;base64,' + imgList[0].toString('base64'))
-  if (imgList.length === 1) return ''
+  if (imgList.length === 0) return ''
   const bufferimg = await (await joinImages.joinImages(imgList, { direction: 'vertical' })).png().toBuffer()
   return ('data:image/png;base64,' + bufferimg.toString('base64'))
 }
