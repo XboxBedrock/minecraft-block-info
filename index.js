@@ -110,3 +110,12 @@ module.exports.search = async function search (query) {
 
   return exportList
 }
+
+module.exports.filterInvalid = async function filterInvalid (queryList = []) {
+  const exportList = []
+  queryList.forEach((element) => {
+    if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toLowerCase())) exportList.push(element)
+  })
+
+  return [...new Set(exportList)]
+}

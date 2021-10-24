@@ -8,5 +8,5 @@ declare module 'minecraft-block-info' {
     export function getBlockInfoFromNames(names: any[]): Promise<any[]>;
     export function getBlockInfoFromDisplayNames(displayNames: any[]):Promise<any[]>;
     export function searchAbsolute(queryList: any[]): Promise<any[]>;
-    export function search(query: string): Promise<any[]>;
+    export function filterInvalid(queryList: any[]): Promise<any[]>;
 }
