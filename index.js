@@ -117,5 +117,5 @@ module.exports.filterInvalid = async function filterInvalid (queryList = []) {
     if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toString().toLowerCase())) exportList.push(element)
   })
 
-  return [...new Map(exportList.map(item => [item.id, item])).values()]
+  return [...new Set(exportList)]
 }
