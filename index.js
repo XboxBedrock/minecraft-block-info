@@ -62,7 +62,7 @@ module.exports.getBlockInfoFromIDs = async function getBlockInfoFromIDs (ids = [
     else throw new Error('Invalid Block ID present')
   })
 
-  return [...new Set(exportList)]
+  return [...new Set([...new Map(exportList.map(item => [item.id, item])).values()])]
 }
 
 module.exports.getBlockInfoFromNames = async function getBlockInfoFromNames (names = []) {
@@ -72,7 +72,7 @@ module.exports.getBlockInfoFromNames = async function getBlockInfoFromNames (nam
     else throw new Error('Invalid Block Name present')
   })
 
-  return [...new Set(exportList)]
+  return [...new Set([...new Map(exportList.map(item => [item.id, item])).values()])]
 }
 
 module.exports.getBlockInfoFromDisplayNames = async function getBlockInfoFromDisplayNames (displayNames = []) {
@@ -82,7 +82,7 @@ module.exports.getBlockInfoFromDisplayNames = async function getBlockInfoFromDis
     else throw new Error('Invalid Block Display Name present')
   })
 
-  return [...new Set(exportList)]
+  return [...new Set([...new Map(exportList.map(item => [item.id, item])).values()])]
 }
 
 module.exports.searchAbsolute = async function searchAbsolute (queryList = []) {
@@ -91,7 +91,7 @@ module.exports.searchAbsolute = async function searchAbsolute (queryList = []) {
     if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toString().toLowerCase())) exportList.push(mergedMappings[Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toString().toLowerCase())])
   })
 
-  return [...new Set(exportList)]
+  return [...new Set([...new Map(exportList.map(item => [item.id, item])).values()])]
 }
 
 module.exports.search = async function search (query) {
@@ -108,7 +108,7 @@ module.exports.search = async function search (query) {
     else return 0
   })
 
-  return exportList
+  return [...new Set([...new Map(exportList.map(item => [item.id, item])).values()])]
 }
 
 module.exports.filterInvalid = async function filterInvalid (queryList = []) {
@@ -117,5 +117,5 @@ module.exports.filterInvalid = async function filterInvalid (queryList = []) {
     if (Object.keys(mergedMappings).find(key => key.toLowerCase() === element.toString().toLowerCase())) exportList.push(element)
   })
 
-  return [...new Set(exportList)]
+  return [...new Set([...new Map(exportList.map(item => [item.id, item])).values()])]
 }
