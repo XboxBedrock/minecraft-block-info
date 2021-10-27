@@ -1955,7 +1955,8 @@ const nameMappings = {
         "displayName": "Knowledge Book",
         "name": "knowledge_book",
         "id": 453
-    }
+    },
+    "stained_hardened_clay": {"displayName": "Black Terracotta", "name": "stained_hardened_clay", "id": "159:15"}
 }
 
 module.exports = nameMappings
