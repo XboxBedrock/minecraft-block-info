@@ -8,7 +8,8 @@ const fs = require('fs')
 // mcblockinfo.getBlockInfoFromNames(['dirt', 'grass', 'minecart']).then((res) => { console.log(res) })
 // mcblockinfo.getBlockInfoFromDisplayNames(['Dirt', 'Grass Block', 'Minecart']).then((res) => { console.log(res) })
 
-mcblockinfo.search('dirt').then((res) => {
+mcblockinfo.search('terracotta').then((res) => {
+  console.log(res)
   mcblockinfo.getBlockImageObject(res.slice(0, 5)).then((img) => {
     fs.writeFile('test.txt', img, function (err) {
       if (err) return console.log(err)
