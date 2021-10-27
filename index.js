@@ -103,8 +103,8 @@ module.exports.search = async function search (query) {
   })
 
   exportList = [...new Set(exportList)].sort((firstEl, secondEl) => {
-    if ((idCompare(firstEl.id.toString(), query) + stringSimilarity.compareTwoStrings(firstEl.name, query) + stringSimilarity.compareTwoStrings(firstEl.displayName, query)) > (idCompare(secondEl.id.toString(), query) + stringSimilarity.compareTwoStrings(secondEl.name, query) + stringSimilarity.compareTwoStrings(secondEl.displayName, query))) return -1
-    else if ((idCompare(firstEl.id.toString(), query) + stringSimilarity.compareTwoStrings(firstEl.name, query) + stringSimilarity.compareTwoStrings(firstEl.displayName, query)) < (idCompare(secondEl.id.toString(), query) + stringSimilarity.compareTwoStrings(secondEl.name, query) + stringSimilarity.compareTwoStrings(secondEl.displayName, query))) return 1
+    if ((idCompare(firstEl.id.toString(), query) + stringSimilarity.compareTwoStrings(firstEl.name, query) + stringSimilarity.compareTwoStrings(firstEl.displayName, query) * 2) > (idCompare(secondEl.id.toString(), query) + stringSimilarity.compareTwoStrings(secondEl.name, query) + stringSimilarity.compareTwoStrings(secondEl.displayName, query) * 2)) return -1
+    else if ((idCompare(firstEl.id.toString(), query) + stringSimilarity.compareTwoStrings(firstEl.name, query) + stringSimilarity.compareTwoStrings(firstEl.displayName, query) * 2) < (idCompare(secondEl.id.toString(), query) + stringSimilarity.compareTwoStrings(secondEl.name, query) + stringSimilarity.compareTwoStrings(secondEl.displayName, query) * 2)) return 1
     else return 0
   })
 
