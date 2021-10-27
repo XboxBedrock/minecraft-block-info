@@ -97,14 +97,14 @@ module.exports.searchAbsolute = async function searchAbsolute (queryList = []) {
 module.exports.search = async function search (query) {
   let exportList = []
   listedValues.forEach((element) => {
-    if (element.displayName.includes(query)) exportList.push(element)
-    else if (element.name.includes(query)) exportList.push(element)
-    else if (element.id.toString().includes(query)) exportList.push(element)
+    if (element.displayName.toLowerCase().includes(query.toLowerCase())) exportList.push(element)
+    else if (element.name.toLowerCase().includes(query.toLowerCase())) exportList.push(element)
+    else if (element.id.toString().toLowerCase().includes(query.toLowerCase())) exportList.push(element)
   })
 
   exportList = [...new Set(exportList)].sort((firstEl, secondEl) => {
-    if ((idCompare(firstEl.id.toString(), query) + stringSimilarity.compareTwoStrings(firstEl.name, query) + stringSimilarity.compareTwoStrings(firstEl.displayName, query) * 2) > (idCompare(secondEl.id.toString(), query) + stringSimilarity.compareTwoStrings(secondEl.name, query) + stringSimilarity.compareTwoStrings(secondEl.displayName, query) * 2)) return -1
-    else if ((idCompare(firstEl.id.toString(), query) + stringSimilarity.compareTwoStrings(firstEl.name, query) + stringSimilarity.compareTwoStrings(firstEl.displayName, query) * 2) < (idCompare(secondEl.id.toString(), query) + stringSimilarity.compareTwoStrings(secondEl.name, query) + stringSimilarity.compareTwoStrings(secondEl.displayName, query) * 2)) return 1
+    if ((idCompare(firstEl.id.toString().toLowerCase(), query.toLowerCase()) + stringSimilarity.compareTwoStrings(firstEl.name.toLowerCase(), query.toLowerCase()) + stringSimilarity.compareTwoStrings(firstEl.displayName.toLowerCase(), query.toLowerCase())) > (idCompare(secondEl.id.toString().toLowerCase(), query.toLowerCase()) + stringSimilarity.compareTwoStrings(secondEl.name.toLowerCase(), query.toLowerCase()) + stringSimilarity.compareTwoStrings(secondEl.displayName.toLowerCase(), query.toLowerCase()))) return -1
+    else if ((idCompare(firstEl.id.toString().toLowerCase(), query.toLowerCase()) + stringSimilarity.compareTwoStrings(firstEl.name.toLowerCase(), query.toLowerCase()) + stringSimilarity.compareTwoStrings(firstEl.displayName.toLowerCase(), query.toLowerCase())) < (idCompare(secondEl.id.toString().toLowerCase(), query.toLowerCase()) + stringSimilarity.compareTwoStrings(secondEl.name.toLowerCase(), query.toLowerCase()) + stringSimilarity.compareTwoStrings(secondEl.displayName.toLowerCase(), query.toLowerCase()))) return 1
     else return 0
   })
 
