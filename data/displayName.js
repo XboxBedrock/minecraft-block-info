@@ -11,6 +11,12 @@ const displayNameMappings = {
     name: 'stone',
     id: '1:0'
   },
+  Granite: { displayName: 'Granite', name: 'stone', id: '1:1' },
+  'Polished Granite': { displayName: 'Polished Granite', name: 'stone', id: '1:2' },
+  Diorite: { displayName: 'Diorite', name: 'stone', id: '1:3' },
+  'Polished Diorite': { displayName: 'Polished Diorite', name: 'stone', id: '1:4' },
+  Andesite: { displayName: 'Andesite', name: 'stone', id: '1:5' },
+  'Polished Andesite': { displayName: 'Polished Andesite', name: 'stone', id: '1:6' },
   'Grass Block': {
     displayName: 'Grass Block',
     name: 'grass',
@@ -2691,13 +2697,7 @@ const displayNameMappings = {
   'Brown Terracotta': { displayName: 'Brown Terracotta', name: 'stained_hardened_clay', id: '159:12' },
   'Green Terracotta': { displayName: 'Green Terracotta', name: 'stained_hardened_clay', id: '159:13' },
   'Red Terracotta': { displayName: 'Red Terracotta', name: 'stained_hardened_clay', id: '159:14' },
-  'Black Terracotta': { displayName: 'Black Terracotta', name: 'stained_hardened_clay', id: '159:15' },
-  Granite: { displayName: 'Granite', name: 'stone', id: '1:1' },
-  'Polished Granite': { displayName: 'Polished Granite', name: 'stone', id: '1:2' },
-  Diorite: { displayName: 'Diorite', name: 'stone', id: '1:3' },
-  'Polished Diorite': { displayName: 'Polished Diorite', name: 'stone', id: '1:4' },
-  Andesite: { displayName: 'Andesite', name: 'stone', id: '1:5' },
-  'Polished Andesite': { displayName: 'Polished Andesite', name: 'stone', id: '1:6' }
+  'Black Terracotta': { displayName: 'Black Terracotta', name: 'stained_hardened_clay', id: '159:15' }
 }
 
 module.exports = displayNameMappings
