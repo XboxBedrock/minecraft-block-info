@@ -9,7 +9,7 @@ const displayNameMappings = {
   Stone: {
     displayName: 'Stone',
     name: 'stone',
-    id: 1
+    id: '1:0'
   },
   'Grass Block': {
     displayName: 'Grass Block',
@@ -2691,7 +2691,13 @@ const displayNameMappings = {
   'Brown Terracotta': { displayName: 'Brown Terracotta', name: 'stained_hardened_clay', id: '159:12' },
   'Green Terracotta': { displayName: 'Green Terracotta', name: 'stained_hardened_clay', id: '159:13' },
   'Red Terracotta': { displayName: 'Red Terracotta', name: 'stained_hardened_clay', id: '159:14' },
-  'Black Terracotta': { displayName: 'Black Terracotta', name: 'stained_hardened_clay', id: '159:15' }
+  'Black Terracotta': { displayName: 'Black Terracotta', name: 'stained_hardened_clay', id: '159:15' },
+  Granite: { displayName: 'Granite', name: 'stone', id: '1:1' },
+  'Polished Granite': { displayName: 'Polished Granite', name: 'stone', id: '1:2' },
+  Diorite: { displayName: 'Diorite', name: 'stone', id: '1:3' },
+  'Polished Diorite': { displayName: 'Polished Diorite', name: 'stone', id: '1:4' },
+  Andesite: { displayName: 'Andesite', name: 'stone', id: '1:5' },
+  'Polished Andesite': { displayName: 'Polished Andesite', name: 'stone', id: '1:6' }
 }
 
 module.exports = displayNameMappings

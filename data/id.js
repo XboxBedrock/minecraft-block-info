@@ -2,7 +2,7 @@
 
 const idMappings = {
   0: { displayName: 'Air', name: 'air', id: 0 },
-  1: { displayName: 'Stone', name: 'stone', id: 1 },
+  "1:0": { displayName: 'Stone', name: 'stone', id: "1:0" },
   2: { displayName: 'Grass Block', name: 'grass', id: 2 },
   '3:0': { displayName: 'Dirt', name: 'dirt', id: '3:0' },
   '3:1': { displayName: 'Coarse Dirt', name: 'dirt', id: '3:1' },
@@ -1084,7 +1084,13 @@ const idMappings = {
   '159:12': { displayName: 'Brown Terracotta', name: 'stained_hardened_clay', id: '159:12' },
   '159:13': { displayName: 'Green Terracotta', name: 'stained_hardened_clay', id: '159:13' },
   '159:14': { displayName: 'Red Terracotta', name: 'stained_hardened_clay', id: '159:14' },
-  '159:15': { displayName: 'Black Terracotta', name: 'stained_hardened_clay', id: '159:15' }
+  '159:15': { displayName: 'Black Terracotta', name: 'stained_hardened_clay', id: '159:15' },
+  "1:1": { "displayName": "Granite", "name": "stone", "id": "1:1" },
+  "1:2": { "displayName": "Polished Granite", "name": "stone", "id": "1:2" }, 
+  "1:3": { "displayName": "Diorite", "name": "stone", "id": "1:3" }, 
+  "1:4": { "displayName": "Polished Diorite", "name": "stone", "id": "1:4" }, 
+  "1:5": { "displayName": "Andesite", "name": "stone", "id": "1:5" }, 
+  "1:6": { "displayName": "Polished Andesite", "name": "stone", "id": "1:6" }
 }
 
 module.exports = idMappings
